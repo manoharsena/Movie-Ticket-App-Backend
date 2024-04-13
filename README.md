@@ -30,12 +30,27 @@ The frontend of this application is built separately and deployed on Netlify. Yo
 5. The server should now be running locally.
 
 ## API Endpoints
+Admin User
+- **POST /admin/signup**: Register a new admin.
+- **POST /admin/login**: Admin user login.
+- **GET /admin/**: Get all registered admin users.
+- **GET /admin/:id**: Get admin user detail by id.
 
-- **POST /api/user/register**: Register a new user.
-- **POST /api/user/login**: Login existing user.
-- **GET /api/user/listallusers**: Get all registered users.
-- **POST /api/user/forgotpassword**: Request password reset.
-- **PUT /api/user/resetpassword**: Reset user password.
-- **POST /api/user/shorturl/:email**: Generate a short URL for a given user email.
-- **GET /api/user/shortid/:shortUrl**: Redirect to the original URL associated with the short URL.
-- **GET /api/user/geturlcounts**: Get analytics on URL clicks.
+User
+- **POST /user/signup**: Register a new user.
+- **POST /user/login**: Login user.
+- **GET /user/**: Get all registered users.
+- **GET /user/:id**: Get user detail by id.
+- **PUT /user/:id**: Update user detail by id.
+- **DELETE /user/:id**: Delete user detail by id.
+- **GET /bookings/:id**: Get booking details of user by id.
+
+Movies
+- **GET /movie/**: Get all movie details.
+- **GET /movie/:id**: Get movie detail by id.
+- **POST /movie/**: Add new movie details.
+
+Booking
+- **GET /booking/:id**: Get booking details by id.
+- **POST /booking/**: Create a new booking.
+- **DELETE /booking/:id**: Delete booking by id.
